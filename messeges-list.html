@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Повідомляємо</title>
+            <script type="module">
+              import renderTemplate from "./renderTemplates.js";
+
+              const searchParams = new URLSearchParams(location.search);
+
+              renderTemplate(
+                "nav",
+                "/categories.hbs",
+                `http://localhost:1337/api/categories/${searchParams.get("categories")}`
+              );
+            </script>
+    <style>
+      body {
+        margin: 0 auto;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        width: -moz-available;
+        height: 55px;
+        background: black;
+      }
+      .logo {
+        border-right: solid white 1px;
+        padding-right: 35px;
+      }
+      .navConteiner {
+        width: 1200px;
+        height: 55px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .mainNav {
+        color: white;
+        font-size: 16px;
+        line-height: 55px;
+        font-weight: 600;
+        font-family: sans-serif;
+        margin: 15px;
+        text-decoration: none;
+      }
+      .mainNav:hover {
+        color: #ff8b33;
+      }
+      button {
+        margin: 0 10px;
+      }
+      .donation {
+        background: linear-gradient(to right, #4bdd88, #27ae7e);
+        border-radius: 35px;
+        font-family: Montserrat, sans-serif;
+        color: #f8f8f8;
+        font-size: 16px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 20px;
+        cursor: pointer;
+        border: none;
+        padding: 10px 17px 10px 55px;
+        height: 42px;
+        align-items: center;
+      }
+      .language {
+        background: black;
+        border-radius: 35px;
+        font-family: Montserrat, sans-serif;
+        color: #f8f8f8;
+        font-size: 16px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 20px;
+        cursor: pointer;
+        border: solid #f8f8f8 2px;
+        padding: 8px;
+        height: 42px;
+        align-items: center;
+      }
+      .body {
+        margin: 0 auto;
+        width: 960px;
+      }
+      nav {
+        margin: 55px auto 30px;
+        border-bottom: solid lightgray 1px;
+      }
+      .subHeader {
+        width: 1200px;
+        height: 47px;
+        margin: 0 auto;
+      }
+      .subNav {
+        /*margin: 55px auto 30px;*/
+        font-family: monserat, sans-serif;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 47px;
+        margin: 15px;
+        color: black;
+      }
+      h1 {
+        border-left: 4px solid #ff8b33;
+        padding: 5px 20px 0;
+        font-family: Montserrat, sans-serif;
+      }
+      footer {
+        background: #191a1e;
+        color: #f8f8f8;
+      }
+      conteinerFooter {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 20px;
+        grid-template-rows: auto;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .column1Footer {
+        grid-column: 1 / 2;
+      }
+      .container {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+      }
+      .itemMain {
+        grid-column: 1 / 9;
+        padding: 0 0 20px;
+      }
+      .mainHalf1 {
+        grid-column: 1 / 5;
+        padding: 20px 0;
+      }
+      .mainHalf2 {
+        grid-column: 5 / 9;
+        padding: 20px 0;
+      }
+      .aside {
+        grid-column: 9 / 13;
+        grid-row: 1;
+        padding: 0 20px 20px;
+        background: #f8f8f8;
+        border-top: 4px solid #ff8b33;
+        font-family: Montserrat, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #191a1e;
+        text-align: left;
+      }
+      p {
+        border-bottom: 1px solid lightgray;
+        padding: 0 0 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navConteiner">
+        <a class="mainNav logo" href="index.html">hromadske</a>
+        <a class="mainNav" href="messeges-list.html">Повідомляємо</a>
+        <a class="mainNav" href="article-list.html">Пояснюємо</a>
+        <a class="mainNav" href="Stories-list.html">Розповідаємо</a>
+        <a class="mainNav logo" href="">Показуємо</a>
+        <button class="language">Search</button>
+        <button class="donation">Підтримати</button>
+        <button class="language">Укр</button>
+      </div>
+    </header>
+    <nav>
+      <div class="subHeader">
+        <a class="subNav" href="">Політика</a>
+        <a class="subNav" href="">Світ</a>
+        <a class="subNav" href="">Економіка</a>
+        <a class="subNav" href="">Наука</a>
+        <a class="subNav" href="">Суспільство</a>
+        <a class="subNav" href="">Лайфстайл</a>
+        <a class="subNav" href="">Війна</a>
+      </div>
+    </nav>
+    <div class="body">
+      <main>
+        <h1>Повідомляємо: останні новини</h1>
+        <article></article>
+      </main>
+    </div>
+    <footer>
+      <h2 style="text-align: center">Підпишись на розсилку</h2>
+      <h4 style="text-align: center">Щонеділі наші редактори відбирають для вас найкращі історії тижня</h4>
+      <form style="text-align: center">
+        <input />
+        <input
+          type="button"
+          value="Підписатись"
+          style="
+            background: #ff8b33;
+            border: none;
+            color: #f8f8f8;
+            padding: 10px;
+          "
+        />
+      </form>
+      <div class="conteinerFooter">
+        <div class="column1Footer" style="grid-column: 1/2"></div>
+        <div class="column2Footer" style="grid-column: 2/3">
+          <a href="">Про Громадське</a>
+          <a href="">Вакансії</a>
+          <a href="">Наші політики</a>
+        </div>
+        <div class="column3Footer" style="grid-column: 3/4">
+          <a href="">Контакти</a>
+          <a href="">Фінансові звіти</a>
+          <a href="">Тендери</a>
+        </div>
+        <div class="column4Footer" style="grid-column: 4/5">
+          <a href="">Структура власності</a>
+          <a href="">Реклама</a>
+        </div>
+        <div class="column5Footer" style="grid-column: 5/6">
+          <p>
+            Підтримай Громадське. Ми працюємо для тебе та завдяки тобі. Будь
+            нашим другом
+          </p>
+          <button
+            style="color: #f8f8f8; background: #ff8b33; padding: 5px 50px"
+          >
+            Підтримати
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
