@@ -1,0 +1,29 @@
+.layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.layout--highlight .layout__header {
+  background: gold;
+}
+
+.layout--highlight .layout__main-content {
+  background: red;
+}
+
+.layout--highlight .layout__aside {
+  background: forestgreen;
+}
+
+.layout__header {
+  grid-column: 1/-1;
+}
+
+.layout__main-content {
+  grid-column: 8 span;
+}
+.layout__aside {
+  grid-column: 4 span;
+}

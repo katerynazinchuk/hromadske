@@ -1,4 +1,3 @@
 GET http://localhost:1337/api/categories/
 ###
 GET http://localhost:1337/api/articles/?filters[type][$eqi]=Повідомляємо
-
