@@ -9,40 +9,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Повідомляємо</title>
     <script type="module">
-      import renderTemplate from "./renderTemplates.js";
+      import renderTemplate from "./templates/renderTemplates.js";
 
       const searchParams = new URLSearchParams(location.search);
 
       renderTemplate(
         "nav",
-        "/categories.hbs",
-        `http://localhost:1337/api/categories/${searchParams.get("categories")}`
+        "/templates/categories.hbs",
+        `http://localhost:1337/api/categories/
       );
     </script>
-    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="styles/common.css">
   </head>
   <body>
-    <header>
-      <div class="navConteiner">
-        <a class="mainNav logo" href="index.html">hromadske</a>
-        <a class="mainNav" href="messeges-list.html">Повідомляємо</a>
-        <a class="mainNav" href="article-list.html">Пояснюємо</a>
-        <a class="mainNav" href="Stories-list.html">Розповідаємо</a>
-        <a class="mainNav logo" href="">Показуємо</a>
-        <button class="language">Search</button>
-        <button class="donation">Підтримати</button>
-        <button class="language">Укр</button>
+    <header >
+      <div class="header__navigation-container">
+        <a class="header__navigation-container__item logo" href="index.html">hromadske</a>
+        <a class="header__navigation-container__item" href="messeges-list.html">Повідомляємо</a>
+        <a class="header__navigation-container__item" href="article-list.html">Пояснюємо</a>
+        <a class="header__navigation-container__item" href="Stories-list.html">Розповідаємо</a>
+        <a class="header__navigation-container__item logo" href="">Показуємо</a>
+        <button class="header__navigation-container__item-language">Search</button>
+        <button class="header__navigation-container__item-donation">Підтримати</button>
+        <button class="header__navigation-container__item-language">Укр</button>
       </div>
     </header>
     <nav>
-      <div class="subHeader">
-        <a class="subNav" href="">Політика</a>
-        <a class="subNav" href="">Світ</a>
-        <a class="subNav" href="">Економіка</a>
-        <a class="subNav" href="">Наука</a>
-        <a class="subNav" href="">Суспільство</a>
-        <a class="subNav" href="">Лайфстайл</a>
-        <a class="subNav" href="">Війна</a>
+      <div class="sub-header__container">
+        <a class="sub-header__container__item" href="">Політика</a>
+        <a class="sub-header__container__item" href="">Світ</a>
+        <a class="sub-header__container__item" href="">Економіка</a>
+        <a class="sub-header__container__item" href="">Наука</a>
+        <a class="sub-header__container__item" href="">Суспільство</a>
+        <a class="sub-header__container__item" href="">Лайфстайл</a>
+        <a class="sub-header__container__item" href="">Війна</a>
       </div>
     </nav>
     <div class="body">

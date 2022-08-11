@@ -9,105 +9,115 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <script type="module">
-      import renderTemplate from "./renderTemplates.js";
+      import renderTemplate from "./templates/renderTemplates.js";
 
       const searchParams = new URLSearchParams(location.search);
 
       renderTemplate(
-        "#categoriesNav",
-        "/categories.hbs",
+        "#sub-header",
+        "/templates/categories.hbs",
         `http://localhost:1337/api/categories/`
         // `http://localhost:1337/api/categories/${searchParams.get("categories")}`
       );
 
-      renderTemplate(
-        "#news",
-        "/articles.hbs",
-        `http://localhost:1337/api/categories/?filters[type][$eq]=Повідомляємо`
+      // renderTemplate(
+      //   "#news",
+      //   "/templates/articles.hbs",
+      //   `http://localhost:1337/api/categories/?filters[type][$eq]=Повідомляємо`
       );
     </script>
-    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="styles/common.css" />
   </head>
   <body>
-    <header>
-      <div class="navConteiner">
-        <a class="mainNav logo" href="index.html">hromadske</a>
-        <a class="mainNav" href="messeges-list.html">Повідомляємо</a>
-        <a class="mainNav" href="article-list.html">Пояснюємо</a>
-        <a class="mainNav" href="Stories-list.html">Розповідаємо</a>
-        <a class="mainNav logo" href="">Показуємо</a>
-        <button class="language">Search</button>
-        <button class="donation">Підтримати</button>
-        <button class="language">Укр</button>
+    <header class="header">
+      <div class="header__navigation-container">
+        <a class="header__navigation-container__item logo" href="index.html"
+          >hromadske</a
+        >
+        <a class="header__navigation-container__item" href="messeges-list.html"
+          >Повідомляємо</a
+        >
+        <a class="header__navigation-container__item" href="article-list.html"
+          >Пояснюємо</a
+        >
+        <a class="header__navigation-container__item" href="Stories-list.html"
+          >Розповідаємо</a
+        >
+        <a class="header__navigation-container__item logo" href="">Показуємо</a>
+        <button class="header__navigation-container__item-language">
+          Search
+        </button>
+        <button class="header__navigation-container__item-donation">
+          Підтримати
+        </button>
+        <button class="header__navigation-container__item-language">Укр</button>
       </div>
     </header>
-    <nav id="categoriesNav">
-      <!--      <div class="subHeader">-->
-      <!--        <a class="subNav" href="">Політика</a>-->
-      <!--        <a class="subNav" href="">Світ</a>-->
-      <!--        <a class="subNav" href="">Економіка</a>-->
-      <!--        <a class="subNav" href="">Наука</a>-->
-      <!--        <a class="subNav" href="">Суспільство</a>-->
-      <!--        <a class="subNav" href="">Лайфстайл</a>-->
-      <!--        <a class="subNav" href="">Війна</a>-->
-      <!--      </div>-->
-    </nav>
-    <div class="body">
-      <main>
-        <div class="container">
-          <article class="itemMain">
-            <h2>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Doloremque
-            </h2>
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
-            fuga inventore nobis ratione tempora. Doloremque dolores eligendi
-            fuga impedit, laborum nemo nisi officia provident quibusdam sequi
-            sint vero voluptas? Nam.
-          </article>
-          <article class="mainHalf1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-            amet beatae, cupiditate debitis eaque expedita in maiores maxime
-            molestias nihil, perferendis quaerat quos repudiandae, sit tenetur
-            velit voluptatibus. Iusto, quas!
-          </article>
-          <article class="mainHalf2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-            amet beatae, cupiditate debitis eaque expedita in maiores maxime
-            molestias nihil, perferendis quaerat quos repudiandae, sit tenetur
-            velit voluptatibus. Iusto, quas!
-          </article>
-          <article class="aside">
-            <h2>Останні новини</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Assumenda autem cum dicta eveniet ex facilis harum incidunt
-              libero, magni neque non nulla pariatur placeat, quam qui quidem
-              quod sapiente totam!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Assumenda aut consequatur cupiditate dignissimos doloremque enim
-              expedita, fugit hic illum impedit ipsa ipsam labore laborum
-              molestiae nihil quam voluptatum. Error, in.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-              cupiditate deserunt dignissimos earum et ex in, ipsum nemo officia
-              omnis, quas quia quidem repudiandae sed totam vel, voluptate.
-              Tenetur, voluptates!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Asperiores at deserunt, dignissimos ea hic ipsum nam quaerat qui
-              quia, sapiente tempora ullam. Ducimus ea, laborum neque
-              perferendis provident suscipit temporibus.
-            </p>
-          </article>
-        </div>
-      </main>
-      <aside id="news"></aside>
-    </div>
+    <nav id="sub-header"></nav>
+    <main class="body main-layout">
+      <article class="main-article">
+        <img class="main-article__image" src="" alt="" />
+        <small class="main-article__category"> </small>
+        <h3 class="main-article__title">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+        </h3>
+        <small class="main-article__article-type"></small>
+        <time class="main-article__publication-tim"></time>
+      </article>
+      <article class="mainHalf1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet
+        beatae, cupiditate debitis eaque expedita in maiores maxime molestias
+        nihil, perferendis quaerat quos repudiandae, sit tenetur velit
+        voluptatibus. Iusto, quas!
+      </article>
+      <div class="top-news">
+        <h2 class="top-news__title">Останні новини</h2>
+        <article class="top-news__item">
+          <h5 class="top-news__item__title">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum
+            ex quo ratione. A asperiores, corporis dolore excepturi magnam
+            molestiae necessitatibus nemo neque placeat, reiciendis sit suscipit
+            tempore unde, voluptatum!
+          </h5>
+          <time class="top-news__item__publication-time" datetime="08-08-2022">
+            08 серпня 2022, 19:05
+          </time>
+        </article>
+        <article class="top-news__item">
+          <h5 class="top-news__item__title">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+            fugiat itaque magni quam voluptatem. Autem debitis dolor dolorum est
+            ex fuga hic magnam molestiae nesciunt odit possimus, quasi quibusdam
+            sunt!
+          </h5>
+          <time class="top-news__item__publication-time" datetime="08-08-2022">
+            08 серпня 2022, 19:05
+          </time>
+        </article>
+        <article class="top-news__item">
+          <h5 class="top-news__item__title">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            aperiam aspernatur consequuntur, cumque deleniti, dolore eius est
+            explicabo fugiat inventore ipsum iste laborum libero, maxime
+            officiis optio quas repudiandae velit.
+          </h5>
+          <time class="top-news__item__publication-time" datetime="08-08-2022">
+            08 серпня 2022, 19:05
+          </time>
+        </article>
+        <article class="top-news__item">
+          <h5 class="top-news__item__title">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+            delectus dolorum eos error inventore rem repellendus voluptate?
+            Accusantium aliquid illo ipsum iste maiores, nobis numquam,
+            perferendis praesentium, saepe temporibus unde?
+          </h5>
+          <time class="top-news__item__publication-time" datetime="08-08-2022">
+            08 серпня 2022, 19:05
+          </time>
+        </article>
+      </div>
+    </main>
+    <aside id="news"></aside>
   </body>
 </html>

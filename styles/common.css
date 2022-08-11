@@ -12,13 +12,13 @@ header {
   border-right: solid white 1px;
   padding-right: 35px;
 }
-.navConteiner {
+.header__navigation-container {
   width: 1200px;
   height: 55px;
   margin: 0 auto;
   text-align: center;
 }
-.mainNav {
+.header__navigation-container__item {
   color: white;
   font-size: 16px;
   line-height: 55px;
@@ -27,13 +27,13 @@ header {
   margin: 15px;
   text-decoration: none;
 }
-.mainNav:hover {
+.header__navigation-container__item:hover {
   color: #ff8b33;
 }
 button {
   margin: 0 10px;
 }
-.donation {
+.header__navigation-container__item-donation {
   background: linear-gradient(to right, #4bdd88, #27ae7e);
   border-radius: 35px;
   font-family: Montserrat, sans-serif;
@@ -48,7 +48,7 @@ button {
   height: 42px;
   align-items: center;
 }
-.language {
+.header__navigation-container__item-language {
   background: black;
   border-radius: 35px;
   font-family: Montserrat, sans-serif;
@@ -71,12 +71,12 @@ nav {
   margin: 55px auto 30px;
   border-bottom: solid lightgray 1px;
 }
-.subHeader {
+.sub-header__container {
   width: 1200px;
   height: 47px;
   margin: 0 auto;
 }
-.subNav {
+.sub-header__container__item {
   /*margin: 55px auto 30px;*/
   font-family: monserat, sans-serif;
   text-decoration: none;
@@ -86,13 +86,13 @@ nav {
   margin: 15px;
   color: black;
 }
-.container {
+.main-layout {
   display: grid;
   column-gap: 20px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
 }
-.itemMain {
+.main-article {
   grid-column: 1 / 9;
   padding: 0 0 20px;
 }
@@ -104,7 +104,7 @@ nav {
   grid-column: 5 / 9;
   padding: 20px 0;
 }
-.aside {
+.top-news {
   grid-column: 9 / 13;
   grid-row: 1;
   padding: 0 20px 20px;
