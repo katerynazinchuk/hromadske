@@ -1,0 +1,28 @@
+@import "_variables";
+
+.top-news {
+  grid-column: 9 / 13;
+  grid-row: 1;
+  padding: 0 var(--margin) var(--margin);
+  background: #f8f8f8;
+  border-top: 4px solid #ff8b33;
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #191a1e;
+  text-align: left;
+
+  @media ($mobile-view) {
+    background: gold;
+  }
+
+  &__item {
+  }
+
+  &__item-publication-time {
+  }
+
+  &__item-title {
+  }
+}
