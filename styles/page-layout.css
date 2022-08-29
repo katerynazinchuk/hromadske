@@ -1,0 +1,17 @@
+.page-layout {
+  margin: 0;
+}
+.page-layout__header {
+  position: sticky;
+  top: 0;
+  background: black;
+}
+.page-layout__navigation-placeholder {
+  margin-bottom: 30px;
+}
+.page-layout__container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+/*# sourceMappingURL=page-layout.css.map */

@@ -1,17 +1,7 @@
 @import "variables.css";
 @import "top-news.css";
-body {
-  margin: 0 auto;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  width: -moz-available;
-  height: 55px;
-  background: black;
-}
-
+@import "sub-header.css";
+@import "page-layout.css";
 .logo {
   border-right: solid white 1px;
   padding-right: 35px;
@@ -72,33 +62,6 @@ button {
   padding: 8px;
   height: 42px;
   align-items: center;
-}
-
-.body {
-  margin: 0 auto;
-  width: 1200px;
-}
-
-nav {
-  margin: 55px auto 30px;
-  border-bottom: solid lightgray 1px;
-}
-
-.sub-header__container {
-  width: 1200px;
-  height: 47px;
-  margin: 0 auto;
-}
-
-.sub-header__container__item {
-  /*margin: 55px auto 30px;*/
-  font-family: monserat, sans-serif;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 47px;
-  margin: 15px;
-  color: black;
 }
 
 .main-layout {

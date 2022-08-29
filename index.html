@@ -16,7 +16,7 @@
       renderTemplate(
         "#sub-header",
         "/templates/categories.hbs",
-        "http://192.168.1.104:1337/api/categories/"
+        "http://192.168.178.116:1337/api/categories/"
       );
 
       // renderTemplate(
@@ -24,11 +24,13 @@
       //   "/templates/articles.hbs",
       //   `http://localhost:1337/api/categories/?filters[type][$eq]=Повідомляємо`
       // );
+
+      // set variable on inline style
     </script>
     <link rel="stylesheet" href="styles/common.css" />
   </head>
-  <body>
-    <header class="header">
+  <body class="page-layout">
+    <header class="page-layout__header">
       <div class="header__navigation-container">
         <a class="header__navigation-container__item logo" href="index.html"
           >hromadske</a
@@ -52,8 +54,12 @@
         <button class="header__navigation-container__item-language">Укр</button>
       </div>
     </header>
-    <nav id="sub-header"></nav>
-    <main class="body main-layout">
+    <div id="sub-header" class="page-layout__navigation-placeholder">
+      <nav class="sub-header">
+        <div class="sub-header__container"></div>
+      </nav>
+    </div>
+    <main class="page-layout__container main-layout">
       <article class="main-article">
         <img class="main-article__image" src="" alt="" />
         <small class="main-article__category"> </small>
@@ -116,7 +122,8 @@
           </time>
         </article>
       </div>
+
+      <aside id="news"></aside>
     </main>
-    <aside id="news"></aside>
   </body>
 </html>
