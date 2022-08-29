@@ -2,19 +2,14 @@
 @import "top-news.css";
 @import "sub-header.css";
 @import "page-layout.css";
-.logo {
-  border-right: solid white 1px;
-  padding-right: 35px;
-}
-
+@import "logo.css";
 .header__navigation-container {
   width: var(--content-width);
   height: 55px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.header__navigation-container__item {
+.header__item {
   color: white;
   font-size: 16px;
   line-height: 55px;
@@ -23,8 +18,11 @@
   margin: 15px;
   text-decoration: none;
 }
-
-.header__navigation-container__item:hover {
+.header__item--logo {
+  border-right: solid white 1px;
+  padding-right: 35px;
+}
+.header__item:hover {
   color: #ff8b33;
 }
 
