@@ -8,7 +8,6 @@
   height: 55px;
   margin: 0 auto;
 }
-
 .header__item {
   color: white;
   font-size: 16px;
@@ -25,12 +24,7 @@
 .header__item:hover {
   color: #ff8b33;
 }
-
-button {
-  margin: 0 10px;
-}
-
-.header__navigation-container__item-donation {
+.header__item-donation {
   background: linear-gradient(to right, #4bdd88, #27ae7e);
   border-radius: 35px;
   font-family: Montserrat, sans-serif;
@@ -45,8 +39,7 @@ button {
   height: 42px;
   align-items: center;
 }
-
-.header__navigation-container__item-language {
+.header__item-language {
   background: black;
   border-radius: 35px;
   font-family: Montserrat, sans-serif;
@@ -60,6 +53,10 @@ button {
   padding: 8px;
   height: 42px;
   align-items: center;
+}
+
+button {
+  margin: 0 10px;
 }
 
 .main-layout {
