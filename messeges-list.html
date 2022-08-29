@@ -11,18 +11,22 @@
     <script type="module">
       import renderTemplate from "./templates/renderTemplates.js";
 
-      const searchParams = new URLSearchParams(location.search);
+      // const searchParams = new URLSearchParams(location.search);
 
       renderTemplate(
-        "nav",
+        "#sub-header",
         "/templates/categories.hbs",
-        `http://localhost:1337/api/categories/
+        "http://192.168.178.116:1337/api/categories/"
       );
+
+      renderTemplate("#page-footer", "/templates/page-footer.hbs", {});
+
+      // set variable on inline style
     </script>
-    <link rel="stylesheet" href="styles/common.scss" />
+    <link rel="stylesheet" href="styles/common.css" />
   </head>
-  <body>
-    <header>
+  <body class="page-layout">
+    <header class="page-layout__header">
       <div class="header__navigation-container">
         <a class="header__navigation-container__item logo" href="index.html"
           >hromadske</a
@@ -46,67 +50,18 @@
         <button class="header__navigation-container__item-language">Укр</button>
       </div>
     </header>
-    <nav class="sub-header">
-      <a class="sub-header__item" href="">Політика</a>
-      <a class="sub-header__item" href="">Світ</a>
-      <a class="sub-header__item" href="">Економіка</a>
-      <a class="sub-header__item" href="">Наука</a>
-      <a class="sub-header__item" href="">Суспільство</a>
-      <a class="sub-header__item" href="">Лайфстайл</a>
-      <a class="sub-header__item" href="">Війна</a>
-    </nav>
-    <div class="body">
-      <main>
-        <h1>Повідомляємо: останні новини</h1>
-        <article></article>
-      </main>
+
+    <div id="sub-header" class="page-layout__navigation-placeholder">
+      <nav class="sub-header">
+        <div class="sub-header__container"></div>
+      </nav>
     </div>
-    <footer>
-      <h2 class="myHeader" style="text-align: center">Підпишись на розсилку</h2>
-      <h4 style="text-align: center">
-        Щонеділі наші редактори відбирають для вас найкращі історії тижня
-      </h4>
-      <form style="text-align: center">
-        <input type="text" />
-        <button
-          style="
-            background: #ff8b33;
-            border: none;
-            color: #f8f8f8;
-            padding: 10px;
-          "
-        >
-          Підписатись
-        </button>
-      </form>
-      <div class="containerFooter">
-        <div class="column1Footer" style="grid-column: 1/2"></div>
-        <div class="column2Footer" style="grid-column: 2/3">
-          <a href="">Про Громадське</a>
-          <a href="">Вакансії</a>
-          <a href="">Наші політики</a>
-        </div>
-        <div class="column3Footer" style="grid-column: 3/4">
-          <a href="">Контакти</a>
-          <a href="">Фінансові звіти</a>
-          <a href="">Тендери</a>
-        </div>
-        <div class="column4Footer" style="grid-column: 4/5">
-          <a href="">Структура власності</a>
-          <a href="">Реклама</a>
-        </div>
-        <div class="column5Footer" style="grid-column: 5/6">
-          <p>
-            Підтримай Громадське. Ми працюємо для тебе та завдяки тобі. Будь
-            нашим другом
-          </p>
-          <button
-            style="color: #f8f8f8; background: #ff8b33; padding: 5px 50px"
-          >
-            Підтримати
-          </button>
-        </div>
-      </div>
-    </footer>
+
+    <main class="page-layout__container">
+      <h1>Повідомляємо: останні новини</h1>
+      <article></article>
+    </main>
+
+    <footer id="page-footer"></footer>
   </body>
 </html>

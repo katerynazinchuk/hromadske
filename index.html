@@ -11,13 +11,15 @@
     <script type="module">
       import renderTemplate from "./templates/renderTemplates.js";
 
-      const searchParams = new URLSearchParams(location.search);
+      // const searchParams = new URLSearchParams(location.search);
 
       renderTemplate(
         "#sub-header",
         "/templates/categories.hbs",
         "http://192.168.178.116:1337/api/categories/"
       );
+
+      renderTemplate("#page-footer", "/templates/page-footer.hbs", {});
 
       // renderTemplate(
       //   "#news",
@@ -125,5 +127,7 @@
 
       <aside id="news"></aside>
     </main>
+
+    <footer id="page-footer"></footer>
   </body>
 </html>
