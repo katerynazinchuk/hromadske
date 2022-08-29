@@ -3,7 +3,7 @@
 }
 .sub-header__container {
   margin: auto;
-  width: 1200px;
+  width: var(--content-width);
   height: 47px;
 }
 .sub-header__item {

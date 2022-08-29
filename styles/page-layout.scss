@@ -13,6 +13,6 @@
 
   &__container {
     margin: 0 auto;
-    width: 1200px;
+    width: var(--content-width);
   }
 }

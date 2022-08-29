@@ -8,7 +8,7 @@
   padding-right: 35px;
 }
 .header__navigation-container {
-  width: 1200px;
+  width: var(--content-width);
   height: 55px;
   margin: 0 auto;
   text-align: center;

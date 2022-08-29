@@ -11,7 +11,7 @@
 }
 .page-layout__container {
   margin: 0 auto;
-  width: 1200px;
+  width: var(--content-width);
 }
 
 /*# sourceMappingURL=page-layout.css.map */
