@@ -1,3 +1,0 @@
-GET http://192.168.178.116:1337/api/categories/
-###
-GET http://192.168.178.116:1337/api/articles/?filters[type][$eqi]=Повідомляємо
