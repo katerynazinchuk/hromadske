@@ -1,0 +1,54 @@
+<div class="main-layout">
+  <div class="main-layout__articles-grid-placeholder">
+    <article style="background: #4bdd88; grid-column: 8 span">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+      distinctio illum inventore quidem rem veritatis? Aliquid autem
+      consequatur, corporis ea eaque eligendi fugit ipsam porro provident quis
+      tenetur unde voluptate.
+    </article>
+
+    <article style="background: #ff8b33; grid-column: 4 span">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+      distinctio illum inventore quidem rem veritatis? Aliquid autem
+      consequatur, corporis ea eaque eligendi fugit ipsam porro provident quis
+      tenetur unde voluptate.
+    </article>
+
+    <article style="background: #ff8b33; grid-column: 4 span">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+      distinctio illum inventore quidem rem veritatis? Aliquid autem
+      consequatur, corporis ea eaque eligendi fugit ipsam porro provident quis
+      tenetur unde voluptate.
+    </article>
+
+    <article style="background: #ff8b33; grid-column: 4 span">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+      distinctio illum inventore quidem rem veritatis? Aliquid autem
+      consequatur, corporis ea eaque eligendi fugit ipsam porro provident quis
+      tenetur unde voluptate.
+    </article>
+
+    <article style="background: #ff8b33; grid-column: 4 span">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+      distinctio illum inventore quidem rem veritatis? Aliquid autem
+      consequatur, corporis ea eaque eligendi fugit ipsam porro provident quis
+      tenetur unde voluptate.
+    </article>
+
+  </div>
+
+  <div class="main-layout__top-news-placeholder">
+    <aside class="top-news">
+      <h2 class="top-news__section-title">Останні новини</h2>
+      {{#each data}}
+        <articles class="top-news__item">
+          <h5 class="top-news__item-title">{{attributes.title}}</h5>
+          <time class="top-news__item-publication-time" datetime="08-08-2022">
+            08 серпня 2022, 19:05
+          </time>
+        </articles>
+      {{/each}}
+    </aside>
+  </div>
+
+</div>

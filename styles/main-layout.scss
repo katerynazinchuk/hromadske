@@ -1,0 +1,25 @@
+.main-layout {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+
+  &__articles-grid-placeholder {
+    grid-column: 8 span;
+
+    height: auto;
+    min-height: 0;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+
+    align-content: start;
+  }
+
+  &__top-news-placeholder {
+    grid-column: 9 / 13;
+    grid-row: 1;
+  }
+}

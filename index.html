@@ -25,6 +25,12 @@
         "http://192.168.178.116:1337/api/categories/"
       );
 
+      renderTemplate(
+        "#main-news",
+        "/templates/main-articles.hbs",
+        "http://192.168.178.116:1337/api/articles/"
+      );
+
       renderTemplate("#page-footer", "/templates/page-footer.hbs", {});
       renderTemplate("#main-header", "/templates/header.hbs", {});
 
@@ -46,71 +52,8 @@
         <div class="sub-header__container"></div>
       </nav>
     </div>
-    <main class="page-layout__container main-layout">
-      <article class="main-article">
-        <img class="main-article__image" src="" alt="" />
-        <small class="main-article__category"> </small>
-        <h3 class="main-article__title">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
-        </h3>
-        <small class="main-article__article-type"></small>
-        <time class="main-article__publication-tim"></time>
-      </article>
-      <article class="mainHalf1">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet
-        beatae, cupiditate debitis eaque expedita in maiores maxime molestias
-        nihil, perferendis quaerat quos repudiandae, sit tenetur velit
-        voluptatibus. Iusto, quas!
-      </article>
-      <div class="top-news">
-        <h2 class="top-news__title">Останні новини</h2>
-        <article class="top-news__item">
-          <h5 class="top-news__item-title">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum
-            ex quo ratione. A asperiores, corporis dolore excepturi magnam
-            molestiae necessitatibus nemo neque placeat, reiciendis sit suscipit
-            tempore unde, voluptatum!
-          </h5>
-          <time class="top-news__item-publication-time" datetime="08-08-2022">
-            08 серпня 2022, 19:05
-          </time>
-        </article>
-        <article class="top-news__item">
-          <h5 class="top-news__item-title">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
-            fugiat itaque magni quam voluptatem. Autem debitis dolor dolorum est
-            ex fuga hic magnam molestiae nesciunt odit possimus, quasi quibusdam
-            sunt!
-          </h5>
-          <time class="top-news__item-publication-time" datetime="08-08-2022">
-            08 серпня 2022, 19:05
-          </time>
-        </article>
-        <article class="top-news__item">
-          <h5 class="top-news__item-title">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-            aperiam aspernatur consequuntur, cumque deleniti, dolore eius est
-            explicabo fugiat inventore ipsum iste laborum libero, maxime
-            officiis optio quas repudiandae velit.
-          </h5>
-          <time class="top-news__item-publication-time" datetime="08-08-2022">
-            08 серпня 2022, 19:05
-          </time>
-        </article>
-        <article class="top-news__item">
-          <h5 class="top-news__item-title">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-            delectus dolorum eos error inventore rem repellendus voluptate?
-            Accusantium aliquid illo ipsum iste maiores, nobis numquam,
-            perferendis praesentium, saepe temporibus unde?
-          </h5>
-          <time class="top-news__item-publication-time" datetime="08-08-2022">
-            08 серпня 2022, 19:05
-          </time>
-        </article>
-      </div>
-
-      <aside id="news"></aside>
+    <main class="page-layout__container">
+      <div id="main-news"></div>
     </main>
 
     <footer id="page-footer"></footer>
